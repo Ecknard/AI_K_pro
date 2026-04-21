@@ -2,7 +2,8 @@
 sentiment_analyzer.py — Partie II, Tâche 6 : Analyse de sentiments
 TP1 — Intelligence Artificielle & Cybersécurité
 
-AMÉLIORATIONS v2 :
+Details :
+
     - Détection automatique de la langue (langdetect) avec fallback anglais
     - Support natif du français via lexique VADER étendu + TextBlob fallback
     - Seuils adaptatifs basés sur la distribution glissante des 50 derniers scores
