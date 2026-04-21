@@ -35,8 +35,9 @@ ai_keylogger/
 
 ```bash
 # 1. Cloner le repo
-git clone https://github.com/Ecknard/AI_K.git
+git clone https://github.com/Ecknard/Projet_keylogger_ai.git
 cd ai_keylogger
+
 
 # 2. Création de l'environnement virtuel
 python -m venv env
