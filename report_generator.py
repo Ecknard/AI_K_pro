@@ -223,7 +223,7 @@ def plot_sensitive_data_distribution(detections: list) -> Optional[object]:
         hovertemplate="%{label}: %{value} détections (%{percent})<extra></extra>",
     ))
     fig.update_layout(
-        title="🔒 Répartition des données sensibles détectées",
+        title=" Répartition des données sensibles détectées",
         template="plotly_white",
         height=400,
         annotations=[dict(text=f"Total<br>{sum(values)}", x=0.5, y=0.5,
@@ -262,7 +262,7 @@ def plot_anomaly_timeline(alerts: list) -> Optional[object]:
                   annotation_text="Seuil anomalie")
 
     fig.update_layout(
-        title="⚠️  Timeline des anomalies détectées",
+        title="  Timeline des anomalies détectées",
         xaxis_title="Horodatage",
         yaxis_title="Score d'anomalie (Isolation Forest)",
         template="plotly_white",
@@ -397,12 +397,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 </head>
 <body>
     <div class="header">
-        <h1>🔍 Rapport d'Analyse — AI Keylogger</h1>
+        <h1> Rapport d'Analyse — AI Keylogger</h1>
         <p>Généré automatiquement le {{ date }}</p>
     </div>
     <div class="container">
         <div class="warning">
-            ⚠️ <strong>Usage éthique uniquement.</strong>
+             <strong>Usage éthique uniquement.</strong>
             Ce rapport est généré dans un cadre pédagogique et/ou avec le consentement explicite de l'utilisateur monitoré.
         </div>
 
@@ -492,8 +492,8 @@ def generate_html_report(data_dir: str = "data", output_path: str = "data/report
         ("🕐 Heatmap d'activité",             plot_activity_heatmap(
             load_json(os.path.join(data_dir, "metadata.json"))
         )),
-        ("🔒 Données sensibles (répartition)", plot_sensitive_data_distribution(data["detections"])),
-        ("⚠️  Timeline des anomalies",         plot_anomaly_timeline(data["alerts"])),
+        (" Données sensibles (répartition)", plot_sensitive_data_distribution(data["detections"])),
+        ("  Timeline des anomalies",         plot_anomaly_timeline(data["alerts"])),
     ]
 
     charts = []
